@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Encabezado */
+.cabe {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: black;
+    padding: 12px 20px;
+}
+
+.cabe-cont,
+.logo,
+.menu-nav,
+.cabe-acci {
+    display: flex;
+    align-items: center;
+}
+
+.cabe-cont {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    gap: 10px;
+    text-decoration: none;
+    color: rgb(231, 209, 9);
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 60px;
+    height: 38px;
+    border-radius: 4px;
+}
+
+.logo-txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-txt span {
+    font-size: 0.65rem;
+    color: #ccc;
+}
+
+.menu-nav {
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-nav a:hover,
+.logo:hover,
+.btn-acci:hover {
+    color: yellow;
+}
+
+.cabe-acci {
+    gap: 15px;
+}
+
+.btn-acci {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.carr-num {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: yellow;
+    color: black;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    padding: 2px 5px;
+}
+
+/* 2. Portada */
+.port-sec {
+    text-align: center;
+}
+
+.port-img {
+    width: 100%;
+    display: block;
+}
+
+/* 3. Catálogo y Tarjetas */
+.cata-sec {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1250px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.cata-titu {
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    margin: 0 0 10px;
+}
+
+.cata-desc {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #ccc;
+}
+
+.prod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.cart-prod {
+    background-color: #12141a;
+    border: 1px solid #222530;
+    border-radius: 8px;
+}
+
+.cart-prod:hover {
+    border-color: yellow;
+    transform: scale(1.05);
+}
+
+.cart-img {
+    position: relative;
+    height: 220px;
+}
+
+.prod-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desc-etiq {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: yellow;
+    color: black;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.cart-info {
+    padding: 15px;
+}
+
+.prod-marc {
+    font-size: 0.75rem;
+    color: yellow;
+    text-transform: uppercase;
+    font-family: Georgia, serif;
+}
+
+.prod-mode {
+    font-size: 1.1rem;
+    margin: 5px 0 10px;
+}
+
+.prec-caja {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.prec-anti {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 0.85rem;
+}
+
+.prec-actu {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-comp {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid yellow;
+    color: yellow;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.btn-comp:hover {
+    background: yellow;
+    color: black;
+}
+
+/* 4. Pie de página */
+.pie {
+    margin-top: auto;
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid #222;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* 5. Detalle de Producto */
+.detalle-sec {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.detalle-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.detalle-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    flex: 1.2;
+    min-width: 300px;
+}
+
+.detalle-img {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #12141a;
+    transition: transform 0.3s;
+}
+
+.detalle-img:hover {
+    transform: scale(1.05);
+}
+
+.detalle-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.detalle-titu {
+    font-size: 2rem;
+    margin: 5px 0 15px;
+}
+
+.detalle-cuotas {
+    color: #888;
+    font-size: 0.85rem;
+    margin: 0 0 15px;
+}
+
+.detalle-lista {
+    color: #ccc;
+    line-height: 1.6;
+    padding-left: 20px;
+    margin: 0 0 20px;
+}
+
+.detalle-acciones {
+    display: flex;
+    gap: 15px;
+}
+
+.detalle-acciones button {
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid yellow;
+    background: transparent;
+    color: yellow;
+}
+
+.detalle-acciones button:hover {
+    background: yellow;
+    color: black;
+}
