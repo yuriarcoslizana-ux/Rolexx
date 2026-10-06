@@ -30,9 +30,9 @@
                 </ul>
             </nav>
             <div class="cabe-acci">
-                <button class="btn-acci" title="Carrito de Compras">
+                <button class="btn-acci" id="btn-carrito" title="Carrito de Compras">
                     &#128722;
-                    <span class="carr-num">0</span>
+                    <span class="carr-num" id="carr-num">0</span>
                 </button>
             </div>
         </div>
@@ -56,7 +56,7 @@
         </p>
 
         <div class="prod-grid">
-            <!-- rolex -->
+            <!-- ROLEX -->
             <article class="cart-prod">
                 <div class="cart-img">
                     <span class="desc-etiq">-15% OFF</span>
@@ -69,27 +69,71 @@
                         <span class="prec-anti">$14,500</span>
                         <span class="prec-actu">$12,325 USD</span>
                     </div>
-                    <a href="rolex1.html" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="rolex1.html" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(1)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
             <article class="cart-prod">
                 <div class="cart-img">
-                    <span class="desc-etiq">-15% OFF</span>
+                    <span class="desc-etiq">-10% OFF</span>
                     <img src="img/rolex2.png" class="prod-img">
                 </div>
                 <div class="cart-info">
                     <span class="prod-marc">Rolex</span>
                     <h3 class="prod-mode">Cosmograph Daytona "Panda"</h3>
                     <div class="prec-caja">
-                        <span class="prec-anti">$14,500</span>
-                        <span class="prec-actu">$12,325 USD</span>
+                        <span class="prec-anti">$34,500</span>
+                        <span class="prec-actu">$31,050 USD</span>
                     </div>
-                    <a href="rolex2.html" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="rolex2.html" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(2)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
-            <!-- OMEGA-->
+            <article class="cart-prod">
+                <div class="cart-img">
+                    <span class="desc-etiq">-10% OFF</span>
+                    <img src="img/rolex3.png" class="prod-img">
+                </div>
+                <div class="cart-info">
+                    <span class="prod-marc">Rolex</span>
+                    <h3 class="prod-mode">GMT-Master II "Pepsi" 40mm</h3>
+                    <div class="prec-caja">
+                        <span class="prec-anti">$22,500</span>
+                        <span class="prec-actu">$20,250 USD</span>
+                    </div>
+                    <div class="cart-btns">
+                        <a href="rolex3.html" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(3)">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart-prod">
+                <div class="cart-img">
+                    <span class="desc-etiq">-10% OFF</span>
+                    <img src="img/rolex4.png" class="prod-img">
+                </div>
+                <div class="cart-info">
+                    <span class="prod-marc">Rolex</span>
+                    <h3 class="prod-mode">Datejust 41 Oystersteel</h3>
+                    <div class="prec-caja">
+                        <span class="prec-anti">$12,800</span>
+                        <span class="prec-actu">$11,520 USD</span>
+                    </div>
+                    <div class="cart-btns">
+                        <a href="rolex4.html" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(4)">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- OMEGA -->
             <article class="cart-prod">
                 <div class="cart-img">
                     <span class="desc-etiq">-10% OFF</span>
@@ -102,7 +146,10 @@
                         <span class="prec-anti">$8,200</span>
                         <span class="prec-actu">$7,380 USD</span>
                     </div>
-                    <a href="" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="omega1.html" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(5)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
@@ -115,80 +162,152 @@
                     <span class="prod-marc">Omega</span>
                     <h3 class="prod-mode">Seamaster Diver 300M</h3>
                     <div class="prec-caja">
-                        <span class="prec-anti">$6,200</span>
-                        <span class="prec-actu">$7,380 USD</span>
+                        <span class="prec-anti">$5,900</span>
+                        <span class="prec-actu">$5,310 USD</span>
                     </div>
-                    <a href="" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="omega2.html" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(6)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
-            <!-- CARTIER-->
             <article class="cart-prod">
                 <div class="cart-img">
-                    <span class="desc-etiq">-20% OFF</span>
+                    <span class="desc-etiq">-15% OFF</span>
+                    <img src="img/omega3.png" class="prod-img">
+                </div>
+                <div class="cart-info">
+                    <span class="prod-marc">Omega</span>
+                    <h3 class="prod-mode">Aqua Terra 150M Co-Axial</h3>
+                    <div class="prec-caja">
+                        <span class="prec-anti">$6,400</span>
+                        <span class="prec-actu">$5,440 USD</span>
+                    </div>
+                    <div class="cart-btns">
+                        <a href="omega3.html" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(7)">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARTIER -->
+            <article class="cart-prod">
+                <div class="cart-img">
+                    <span class="desc-etiq">-15% OFF</span>
                     <img src="img/cartier1.png" class="prod-img">
                 </div>
                 <div class="cart-info">
                     <span class="prod-marc">Cartier</span>
-                    <h3 class="prod-mode">Tank Louis Cartier</h3>
+                    <h3 class="prod-mode">Tank Louis Cartier Oro 18k</h3>
                     <div class="prec-caja">
-                        <span class="prec-anti">$6,500</span>
-                        <span class="prec-actu">$28,400 USD</span>
+                        <span class="prec-anti">$14,000</span>
+                        <span class="prec-actu">$11,900 USD</span>
                     </div>
-                    <a href="" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="cartier1.html" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(8)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
             <article class="cart-prod">
                 <div class="cart-img">
-                    <span class="desc-etiq">-20% OFF</span>
+                    <span class="desc-etiq">-10% OFF</span>
                     <img src="img/cartier2.png" class="prod-img">
                 </div>
                 <div class="cart-info">
                     <span class="prod-marc">Cartier</span>
-                    <h3 class="prod-mode">Carrera Chronograph</h3>
+                    <h3 class="prod-mode">Santos de Cartier Large</h3>
                     <div class="prec-caja">
-                        <span class="prec-anti">$6,500</span>
-                        <span class="prec-actu">$5,200 USD</span>
+                        <span class="prec-anti">$7,900</span>
+                        <span class="prec-actu">$7,110 USD</span>
                     </div>
-                    <a href="#" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="#" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(9)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
-            <!-- TAG Heuer-->
             <article class="cart-prod">
                 <div class="cart-img">
-                    <span class="desc-etiq">-20% OFF</span>
+                    <span class="desc-etiq">-10% OFF</span>
+                    <img src="img/cartier3.png" class="prod-img">
+                </div>
+                <div class="cart-info">
+                    <span class="prod-marc">Cartier</span>
+                    <h3 class="prod-mode">Ballon Bleu de Cartier 42mm</h3>
+                    <div class="prec-caja">
+                        <span class="prec-anti">$7,450</span>
+                        <span class="prec-actu">$6,705 USD</span>
+                    </div>
+                    <div class="cart-btns">
+                        <a href="#" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(10)">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- TAG HEUER -->
+            <article class="cart-prod">
+                <div class="cart-img">
+                    <span class="desc-etiq">-15% OFF</span>
                     <img src="img/tag1.png" class="prod-img">
                 </div>
                 <div class="cart-info">
                     <span class="prod-marc">TAG Heuer</span>
-                    <h3 class="prod-mode">Carrera Chronograph</h3>
+                    <h3 class="prod-mode">Carrera Chronograph 42mm</h3>
                     <div class="prec-caja">
                         <span class="prec-anti">$6,500</span>
-                        <span class="prec-actu">$5,200 USD</span>
+                        <span class="prec-actu">$5,525 USD</span>
                     </div>
-                    <a href="#" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="#" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(11)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
             <article class="cart-prod">
                 <div class="cart-img">
-                    <span class="desc-etiq">-20% OFF</span>
+                    <span class="desc-etiq">-15% OFF</span>
                     <img src="img/tag2.png" class="prod-img">
                 </div>
                 <div class="cart-info">
                     <span class="prod-marc">TAG Heuer</span>
-                    <h3 class="prod-mode">TAG Heuer Aquaracer</h3>
+                    <h3 class="prod-mode">Aquaracer Professional 300</h3>
                     <div class="prec-caja">
-                        <span class="prec-anti">$9,500</span>
-                        <span class="prec-actu">$7,200 USD</span>
+                        <span class="prec-anti">$3,600</span>
+                        <span class="prec-actu">$3,060 USD</span>
                     </div>
-                    <a href="#" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="#" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(12)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
-            <!-- Tissot-->
+            <article class="cart-prod">
+                <div class="cart-img">
+                    <span class="desc-etiq">-15% OFF</span>
+                    <img src="img/tag3.png" class="prod-img">
+                </div>
+                <div class="cart-info">
+                    <span class="prod-marc">TAG Heuer</span>
+                    <h3 class="prod-mode">Monaco Calibre 11 "McQueen"</h3>
+                    <div class="prec-caja">
+                        <span class="prec-anti">$7,800</span>
+                        <span class="prec-actu">$6,630 USD</span>
+                    </div>
+                    <div class="cart-btns">
+                        <a href="#" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(13)">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- TISSOT & TUDOR -->
             <article class="cart-prod">
                 <div class="cart-img">
                     <span class="desc-etiq">-12% OFF</span>
@@ -196,34 +315,81 @@
                 </div>
                 <div class="cart-info">
                     <span class="prod-marc">Tissot</span>
-                    <h3 class="prod-mode">PRX Automatic 40mm</h3>
+                    <h3 class="prod-mode">PRX Powermatic 80 40mm</h3>
                     <div class="prec-caja">
-                        <span class="prec-anti">$1,850</span>
-                        <span class="prec-actu">$1,628 USD</span>
+                        <span class="prec-anti">$775</span>
+                        <span class="prec-actu">$682 USD</span>
                     </div>
-                    <a href="#" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="#" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(14)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
-             <article class="cart-prod">
+
+            <article class="cart-prod">
                 <div class="cart-img">
                     <span class="desc-etiq">-12% OFF</span>
                     <img src="img/prueba.jpeg" class="prod-img">
                 </div>
                 <div class="cart-info">
                     <span class="prod-marc">Tissot</span>
-                    <h3 class="prod-mode">PRX Automatic 40mm</h3>
+                    <h3 class="prod-mode">Gentleman Powermatic 80</h3>
                     <div class="prec-caja">
-                        <span class="prec-anti">$1,850</span>
-                        <span class="prec-actu">$1,628 USD</span>
+                        <span class="prec-anti">$825</span>
+                        <span class="prec-actu">$726 USD</span>
                     </div>
-                    <a href="#" class="btn-comp">Comprar</a>
+                    <div class="cart-btns">
+                        <a href="#" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(15)">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart-prod">
+                <div class="cart-img">
+                    <span class="desc-etiq">-10% OFF</span>
+                    <img src="img/omega1.png" class="prod-img">
+                </div>
+                <div class="cart-info">
+                    <span class="prod-marc">Tudor</span>
+                    <h3 class="prod-mode">Black Bay 58 39mm Acero</h3>
+                    <div class="prec-caja">
+                        <span class="prec-anti">$4,100</span>
+                        <span class="prec-actu">$3,690 USD</span>
+                    </div>
+                    <div class="cart-btns">
+                        <a href="#" class="btn-detalles">Detalles</a>
+                        <button class="btn-card-add" onclick="agregarAlCarrito(16)">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
         </div>
     </section>
-    <footer class="pie">
+    <div id="carr-fond" class="carr-fond"></div>
+    <aside id="carr-pane" class="carr-pane">
+        <div class="carr-cabe">
+            <h3>Tu Carrito</h3>
+            <button id="btn-cerr" class="btn-cerr" title="Cerrar">✕</button>
+        </div>
+        <div id="carr-elem" class="carr-elem">
+            <p class="carr-vaci">El carrito está vacío</p>
+        </div>
+        <div class="carr-pie">
+            <div class="tota-cont">
+                <span>Total:</span>
+                <span class="tota-mont">$<span id="carr-tota">0.00</span> USD</span>
+            </div>
+            <button id="btn-vaci" class="btn-vaci">Vaciar Carrito</button>
+            <button class="btn-pedi">Finalizar Pedido</button>
+        </div>
+    </aside>
+
+     <footer class="pie">
         <p>© 2026 YiruWlf | Alta Relojería. Todos los derechos reservados.</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
+
 
 </html>
